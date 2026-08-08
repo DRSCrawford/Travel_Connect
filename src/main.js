@@ -2,12 +2,12 @@
  * Travel Connect - Main Application & Game Loop
  */
 
-import { CONFIG } from './config.js';
-import { COUNTRIES, CITIES, BORDER_GATES } from './map.js';
-import { City } from './City.js';
-import { Route } from './Route.js';
-import { Vehicle } from './Vehicle.js';
-import { Pathfinding } from './Pathfinding.js';
+import { CONFIG } from './src/config.js';
+import { COUNTRIES, CITIES, BORDER_GATES } from './src/map.js';
+import { City } from './src/City.js';
+import { Route } from './src/Route.js';
+import { Vehicle } from './src/Vehicle.js';
+import { Pathfinding } from './src/Pathfinding.js';
 
 class GameEngine {
   constructor() {
