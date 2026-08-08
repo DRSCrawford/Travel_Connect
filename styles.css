@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b1120;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Top HUD Navigation Bar */
+#hud {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.hud-label {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.hud-value {
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.money-value {
+  color: #4ade80;
+}
+
+.penalty-value {
+  color: #f87171;
+}
+
+/* Canvas Container & Display */
+#game-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameCanvas {
+  background-color: #0f172a;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* Floating Info / Selection Card */
+.card {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 280px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.6);
+  z-index: 20;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 6px;
+}
+
+#card-content {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background-color: #0369a1;
+}
+
+.secondary-btn {
+  background-color: #334155;
+  color: #94a3b8;
+}
+
+.secondary-btn:hover {
+  background-color: #475569;
+  color: #f8fafc;
+}
+
+/* Bottom Instructions Bar */
+#instructions {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  font-size: 13px;
+  color: #94a3b8;
+  z-index: 10;
+}

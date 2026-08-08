@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Connect - African Transport Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top HUD Bar -->
+  <div id="hud">
+    <div class="hud-item">
+      <span class="hud-label">Money:</span>
+      <span id="money" class="hud-value money-value">$1,500</span>
+    </div>
+    <div class="hud-item">
+      <span class="hud-label">Unlocked Countries:</span>
+      <span id="country-count" class="hud-value">1</span>
+    </div>
+    <div class="hud-item">
+      <span class="hud-label">Active Routes:</span>
+      <span id="route-count" class="hud-value">0</span>
+    </div>
+    <div class="hud-item">
+      <span class="hud-label">Active Vehicles:</span>
+      <span id="vehicle-count" class="hud-value">0</span>
+    </div>
+    <div class="hud-item">
+      <span class="hud-label">Penalty Rate:</span>
+      <span id="penalty-rate" class="hud-value penalty-value">-$0/s</span>
+    </div>
+  </div>
+
+  <!-- Main Game Canvas Container -->
+  <div id="game-container">
+    <canvas id="gameCanvas" width="1000" height="700"></canvas>
+    
+    <!-- Info Panel / Control Card -->
+    <div id="selection-card" class="card hidden">
+      <h3 id="card-title">Selection Info</h3>
+      <div id="card-content"></div>
+      <button id="card-action-btn" class="btn primary-btn">Action</button>
+      <button id="card-close-btn" class="btn secondary-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Bottom Instructions Bar -->
+  <div id="instructions">
+    💡 <strong>Click a city</strong> to select it, then <strong>click a second city</strong> to build a road route. Click unlocked border gates or neighboring countries to expand your network!
+  </div>
+
+  <!-- Main ES6 Module Entry Point -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
